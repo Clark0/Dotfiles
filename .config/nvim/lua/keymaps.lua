@@ -30,3 +30,12 @@ map('n', '<C-h>', '<C-w>h', default_opts)
 map('n', '<C-j>', '<C-w>j', default_opts)
 map('n', '<C-k>', '<C-w>k', default_opts)
 map('n', '<C-l>', '<C-w>l', default_opts)
+
+-- compile and run C++
+-- % is current buffer filename; %:r is filename without extension
+vim.api.nvim_command([[
+  autocmd filetype cpp nnoremap <leader>b :wa <bar> !g++ -std=c++17 -O2 % -o %:r && echo "Built success" && ./%:r < ./input.txt <CR>
+]])
+
+-- copy all
+map('n', '<leader>ya', ':%y+<CR>', default_opts)

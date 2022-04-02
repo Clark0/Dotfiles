@@ -1,4 +1,6 @@
 require('settings')
 require('keymaps')
-require('plugins/vimplug')
+require('plugins')
+
 require('feline').setup()
+require('nvim-autopairs').setup()

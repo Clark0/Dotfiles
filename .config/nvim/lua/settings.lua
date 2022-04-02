@@ -11,6 +11,7 @@ opt.swapfile = false
 
 -- ui
 opt.number = true
+opt.relativenumber = true
 opt.showmatch = true
 opt.splitright = true
 opt.splitbelow = true
@@ -19,7 +20,9 @@ opt.list = true
 opt.listchars = {tab = '>~', trail = '~'}
 
 opt.termguicolors = true
--- vim.cmd [[colorscheme monokai]]
+vim.cmd [[
+    colorscheme sonokai
+]]
 
 -- search
 opt.smartcase = true
